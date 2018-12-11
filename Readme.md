@@ -3,47 +3,47 @@
 ## Setup
 1. Install Vagrant on OS from https://www.vagrantup.com/downloads.html
 2. Download Vagrant box
-  ```bash
+  ```console
   vagrant box add --name oel7u6 https://yum.oracle.com/boxes/oraclelinux/latest/ol7-latest.box
   ```
   > (Box images are stored in ~/.vagrant.d/boxes - Mac OSX)
 3. Initialize Vagrant Box
-  ```bash
+  ```console
   vagrant init oel7u6
   ```
   > Vagrantfile template is created
 4. Edit Vagrantfile
-  ```bash
+  ```console
   vim Vagrantfile
   ```
 5. Run the VM
-  ```bash
+  ```console
   vagrant up
   ```
 6. Connect to VM
-  ```bash
+  ```console
   vagrant ssh
   ```
 7. List available boxes
-  ```bash
+  ```console
   vagrant box list
   ```
 8. List running VMs
-  ```bash
+  ```console
   vagrant global-status
   ```
 9. Stop the VM
-  ```bash
+  ```console
   vagrant halt oel7-sandbox
   ```
 10. Delete the VM
-  ```bash
+  ```console
   vagrant destroy oel7-sandbox
   ```
 
 ## Vagrant Cheatsheet and Tips
 * Create vagrant box (vm template) from a running VM:
-```bash
+```console
 vagrant package --base my-virtual-machine
 ```
 
