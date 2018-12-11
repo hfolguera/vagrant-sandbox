@@ -20,5 +20,5 @@
 8. List running VMs
   `vagrant global-status`
 9. Stop the VM
-  `vagrant halt oel7u6`
+  `vagrant halt oel7-sandbox`
 

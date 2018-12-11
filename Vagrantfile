@@ -71,7 +71,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 # define hostname
-NAME = "ol7-vagrant"
+NAME = "oel7-sandbox"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ol7u6"
