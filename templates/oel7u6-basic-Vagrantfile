@@ -1,0 +1,30 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+# define hostname
+NAME = "oel7-sandbox"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "oel7u6"
+  config.vm.box_url = "https://yum.oracle.com/boxes/oraclelinux/latest/ol7-latest.box"
+  config.vm.define NAME
+  
+  config.vm.box_check_update = false
+  
+  # change memory size
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 2048
+    v.name = NAME
+  end
+
+config.vm.hostname = NAME
+
+
+# Execute the following script on the first run
+  config.vm.provision "shell", path: "scripts/install.sh"
+#  config.vm.provision :reload # TODO: Reload does not work! why?
+  config.vm.provision "shell", inline: "echo 'INSTALLER: Installation complete, Oracle Linux 7 ready to use!'"
+
+end
