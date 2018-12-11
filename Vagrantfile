@@ -74,7 +74,7 @@ VAGRANTFILE_API_VERSION = "2"
 NAME = "oel7-sandbox"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "ol7u6"
+  config.vm.box = "oel7u6"
   config.vm.box_url = "https://yum.oracle.com/boxes/oraclelinux/latest/ol7-latest.box"
   config.vm.define NAME
   
@@ -89,9 +89,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 config.vm.hostname = NAME
 
 
-# Provision everything on the first run
+# Execute the following script on the first run
   config.vm.provision "shell", path: "scripts/install.sh"
-  config.vm.provision :reload
+#  config.vm.provision :reload # TODO: Reload does not work! why?
   config.vm.provision "shell", inline: "echo 'INSTALLER: Installation complete, Oracle Linux 7 ready to use!'"
 
 end
