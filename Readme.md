@@ -6,12 +6,12 @@
   ```bash
   vagrant box add --name oel7u6 https://yum.oracle.com/boxes/oraclelinux/latest/ol7-latest.box
   ```
-(Box files are stored in ~/.vagrant.d/boxes - Mac OSX)
+  (Box files are stored in ~/.vagrant.d/boxes - Mac OSX)
 3. Initialize Vagrant Box
   ```bash
   vagrant init oel7u6
   ```
-Vagrantfile template is created
+  Vagrantfile template is created
 4. Edit Vagrantfile
   ```bash
   vim Vagrantfile
