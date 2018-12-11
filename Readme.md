@@ -41,6 +41,12 @@
   vagrant destroy oel7-sandbox
   ```
 
+## Vagrant Cheatsheet and Tips
+* Create vagrant box (vm template) from a running VM:
+```bash
+vagrant package --base my-virtual-machine
+```
+
 ## Next Steps
 * Change network interface to public (bridge)
 * Add a second network interface with private network
